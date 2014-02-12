@@ -1,0 +1,124 @@
+@import "library";
+@import "reset";
+
+// Global templates
+
+%group:after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+%container {
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+// Global tags
+
+body {
+    background: white;
+}
+
+a {
+    color: #800000;
+}
+
+// Everything else
+
+.calendar {
+	display: table;
+	border: 1px solid black;
+	width: 700px;
+}
+
+.week {
+	display: table-row;
+}
+
+.day {
+	display: table-cell;
+	width: 100px;
+	border: 1px solid gray;
+	height: 100px;
+
+	ul {
+
+		li {
+			margin: 2px;
+			font-size: 10pt;
+			overflow: hidden nowrap;
+		}
+	}
+}
+
+.date {
+	position: relative;
+	float: right;
+	height: 14px;
+	width: 14px;
+	font-size: 12pt;
+	text-align: center;
+	background: lightgray;
+}
+
+%tag {
+	width: 100%;
+	border-radius: 2px;
+}
+
+.kids {
+	@extend %tag;
+	background: transparentize(green, .5);
+}
+
+.adults {
+	@extend %tag;
+	background: transparentize(blue, .5);
+}
+
+.mobile-date {
+	display: none;
+}
+
+@media screen and (max-width: 480px) {
+
+	.mobile-date {
+		display: inline-block;
+		font-size: 20pt;
+		font-weight: bold;
+	}
+
+	.date {
+		display: none;
+	}
+	
+	.day {
+		display: inline-block;
+		border-bottom: 2px solid black;
+		width: 100%;
+
+		ul li {
+			font-size: 16pt;
+		}
+	}
+
+	%tag {
+		background: transparent;
+	}
+
+	.label {
+		float: right;
+	}
+
+	.empty {
+		display: none;
+		height: 0;
+		border: none;
+
+		div {
+			display: none;
+			height: 0;
+		}
+	}
+}

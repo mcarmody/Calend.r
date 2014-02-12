@@ -1,0 +1,152 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+body {
+  background: white;
+}
+
+a {
+  color: #800000;
+}
+
+.calendar {
+  display: table;
+  border: 1px solid black;
+  width: 700px;
+}
+
+.week {
+  display: table-row;
+}
+
+.day {
+  display: table-cell;
+  width: 100px;
+  border: 1px solid gray;
+  height: 100px;
+}
+.day ul li {
+  margin: 2px;
+  font-size: 10pt;
+  overflow: hidden nowrap;
+}
+
+.date {
+  position: relative;
+  float: right;
+  height: 14px;
+  width: 14px;
+  font-size: 12pt;
+  text-align: center;
+  background: lightgray;
+}
+
+.kids, .adults {
+  width: 100%;
+  border-radius: 2px;
+}
+
+.kids {
+  background: rgba(0, 128, 0, 0.5);
+}
+
+.adults {
+  background: rgba(0, 0, 255, 0.5);
+}
+
+.mobile-date {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .mobile-date {
+    display: inline-block;
+    font-size: 20pt;
+    font-weight: bold;
+  }
+
+  .date {
+    display: none;
+  }
+
+  .day {
+    display: inline-block;
+    border-bottom: 2px solid black;
+    width: 100%;
+  }
+  .day ul li {
+    font-size: 16pt;
+  }
+
+  .kids, .adults {
+    background: transparent;
+  }
+
+  .label {
+    float: right;
+  }
+
+  .empty {
+    display: none;
+    height: 0;
+    border: none;
+  }
+  .empty div {
+    display: none;
+    height: 0;
+  }
+}
