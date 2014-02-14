@@ -9,6 +9,10 @@
     content: "";
 }
 
+.label {
+	display: none;
+}
+
 %container {
     margin: 0 auto;
     max-width: 960px;
@@ -100,15 +104,18 @@ a {
 
 		ul li {
 			font-size: 16pt;
+			float: left;
+			background: transparent;
 		}
 	}
 
-	%tag {
-		background: transparent;
-	}
-
 	.label {
+		position: absolute;
+		display: inline;
 		float: right;
+		left: 200px;
+		width: 75px;
+		text-align: center;
 	}
 
 	.empty {

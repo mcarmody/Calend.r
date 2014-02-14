@@ -55,6 +55,10 @@ table {
   background-position: 0 0;
 }
 
+.label {
+  display: none;
+}
+
 body {
   background: white;
 }
@@ -130,14 +134,17 @@ a {
   }
   .day ul li {
     font-size: 16pt;
-  }
-
-  .kids, .adults {
+    float: left;
     background: transparent;
   }
 
   .label {
+    position: absolute;
+    display: inline;
     float: right;
+    left: 200px;
+    width: 75px;
+    text-align: center;
   }
 
   .empty {
